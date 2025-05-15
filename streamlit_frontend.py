@@ -4,12 +4,12 @@ import requests
 import io
 import json
 
-# --- Configuration ---
-FASTAPI_URL = "http://localhost:8000/predict"  # CHANGE THIS TO YOUR ACTUAL API URL
+
+FASTAPI_URL = "http://localhost:8000/predict"
 PAGE_TITLE = "PlantMD: AI Crop Doctor"
 PAGE_ICON = "🌿"
 
-# --- Helper Functions ---
+
 def preprocess_image(image_pil):
     img_byte_arr = io.BytesIO()
     if image_pil.mode == 'RGBA':
@@ -36,7 +36,7 @@ def make_api_request(image_bytes, filename="image.jpg"):
     except Exception as e:
         return {"error": "Exception", "message": f"An unexpected error occurred: {str(e)}"}
 
-# --- Page Styling ---
+
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON, layout="wide")
 
 st.markdown("""
@@ -99,7 +99,6 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# --- Sidebar ---
 with st.sidebar:
     st.image("https://cdn-icons-png.flaticon.com/512/6046/6046120.png", width=100)
     st.markdown(f"<h1 style='text-align: center;'>{PAGE_TITLE}</h1>", unsafe_allow_html=True)
@@ -120,7 +119,7 @@ with st.sidebar:
     st.markdown("---")
     st.markdown("Made with 💚 by Tanishq")
 
-# --- Main Page ---
+
 st.title(f"🍃 {PAGE_TITLE}")
 st.markdown("Upload a leaf image, and let our AI diagnose its health!")
 
@@ -156,11 +155,11 @@ if uploaded_file is not None:
             st.markdown(f"<h3 style='color: #1E88E5;'>{class_name.replace('___', ' ').replace('_', ' ')}</h3>", unsafe_allow_html=True)
 
             st.markdown(f"**Confidence Score:**")
-            bar_color = "#4CAF50"  # Green
-            if confidence_percent < 70: bar_color = "#FFC107"  # Amber
-            if confidence_percent < 40: bar_color = "#F44336"  # Red
+            bar_color = "#4CAF50"
+            if confidence_percent < 70: bar_color = "#FFC107"
+            if confidence_percent < 40: bar_color = "#F44336"
 
-            # New Confidence Bar HTML
+
             st.markdown(f"""
             <div class="confidence-container">
                 <div class="confidence-text-label">{confidence_percent:.2f}%</div>
@@ -182,7 +181,7 @@ if uploaded_file is not None:
                     st.markdown(f"**💡 Suggested Remedy / Management:**")
                     st.caption("No specific remedy information provided by the API for this condition.")
                 st.markdown("---")
-                # Added search icon 🔍 to the end of the tip
+
                 st.info(f"Tip: You can also search online for '{class_name.replace('___', ' ').replace('_', ' ')} symptoms and treatment' for more information. 🔍")
             else:
                 st.info("Could not determine the condition. Please try a clearer image or a different leaf.")
