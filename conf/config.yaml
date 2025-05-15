@@ -1,0 +1,23 @@
+model:
+  path: "model/"
+  image_size: 256
+
+classes:
+  - "Bacterial Leaf Blight"
+  - "Brown Spot"
+  - "Leaf Blast"
+  - "Leaf scald"
+  - "Narrow Brown Leaf Spot"
+  - "False Smut"
+  - "Rice Hispa"
+  - "Sheath Blight"
+
+remedies:
+  "Bacterial Leaf Blight": "Spray garlic water, use resistant varieties, and practice crop rotation."
+  "Brown Spot": "Spray garlic or ginger water, improve soil fertility, and manage water properly."
+  "Leaf Blast": "Spray neem oil, use blast-resistant varieties, and ensure proper field drainage."
+  "Leaf scald": "Use resistant varieties, apply balanced fertilizers, and avoid excessive nitrogen application."
+  "Narrow Brown Leaf Spot": "Apply potassium fertilizers, improve field drainage, and use disease-free seeds."
+  "False Smut": "Spray neem oil during the growing stage, and use healthy seeds."
+  "Rice Hispa": "Handpick and destroy affected leaves, apply neem-based insecticides, and avoid excessive nitrogen use."
+  "Sheath Blight": "Spray Trichoderma-based biofungicides, ensure proper spacing, and practice field sanitation."

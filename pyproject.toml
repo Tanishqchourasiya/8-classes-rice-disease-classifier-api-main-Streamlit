@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "classifier-api"
+version = "0.1.0"
+description = ""
+authors = ["Pulkit077 <pulkitagarwal2k1@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.112.2"
+uvicorn = "^0.30.6"
+pydantic = "^2.8.2"
+numpy = "1.26.4"
+matplotlib = "^3.9.2"
+pyyaml = "^6.0.2"
+python-multipart = "^0.0.9"
+tensorflow = "2.17.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
