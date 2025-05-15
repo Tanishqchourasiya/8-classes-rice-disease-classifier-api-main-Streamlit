@@ -118,7 +118,7 @@ with st.sidebar:
     st.markdown("---")
     st.info("Disclaimer: This AI model is by students of GIT, Jaipur for Major Project **NOT FOR INDUSTRY USAGE")
     st.markdown("---")
-    st.markdown("Made with 💚 by Tanishq & Shristi")
+    st.markdown("Made with 💚 by Tanishq")
 
 # --- Main Page ---
 st.title(f"🍃 {PAGE_TITLE}")
